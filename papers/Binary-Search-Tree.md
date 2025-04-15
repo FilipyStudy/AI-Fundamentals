@@ -1,4 +1,4 @@
-##Binary Search Tree.
+## Binary Search Tree.
 Binary Search Tree are non-linear data structures.
 They are represented as a finit set of elements named nodes, represented as circles.
 The first node of the binary search tree is named as Root.
