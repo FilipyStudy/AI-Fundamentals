@@ -7,7 +7,7 @@ One tree is formed by sub-tree's where each new node is one root node of this su
 One 0 degree node is called a leaf node. Every node has just one ascendent.
 In Binary Tree each node can have only the maximum of 2 degree's. Where a degree of a tree is:
 
-x $`\in N, where, ( 0 <= x <= 2)`$
+x $`\in N, where, ( 0 \leq x \leq 2)`$
 
 But the level of a node is about how many generations he was from the root node. Considering the level of one node root beeing equal to 0.
 
