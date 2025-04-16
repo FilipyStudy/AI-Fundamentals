@@ -46,4 +46,39 @@ class BinaryTree:
 
 
     def getKeys(self):
-        return f"List of keys: {BinaryTree.binaryTree.keys()}"
+        return print(f"List of keys: {list(BinaryTree.binaryTree.keys())}")
+
+    
+    def removeNode(self, nodeID):
+        if BinaryTree.binaryTree[nodeID][3] != [None, None]:
+            return print(f"The node have {len(BinaryTree.binaryTree[nodeID][3])} children's")
+        elif BinaryTree.binaryTree[nodeID][3] == [None, None]:
+            BinaryTree.binaryTree.pop(nodeID)
+        else:
+            return print("Use the getKeys() function to get the node id's and try again.")
+
+    
+    def getChildrens(self, nodeID):
+        if type(NodeID) != int:
+            return print("Verify the nodeID and try again.")
+        
+        else:
+            return print(f"{BinaryTree.binaryTree[nodeID][3]}")
+
+    def getNodeData(self, nodeID):
+        if type(nodeID) != int:
+            return print("Verify the node id, use getKeys to get a list of node id's")
+        
+        elif nodeID not in list(BinaryTree.binaryTree.keys()):
+            return print("This node ID dosn't exist, use getKeys() method to get a list of the node id's")
+        else:
+            return BinaryTree.binaryTree[nodeID][0]
+
+    def defineNodeData(self, nodeID, data):
+        if type(nodeID) != int and nodeID not in list(BinaryTree.binaryTree.keys()):
+            return print("Verify the node id, and try again. Use getKeys() to get a list of node id's")
+
+        else:
+            BinaryTree.binaryTree[nodeID][0] = data
+
+
