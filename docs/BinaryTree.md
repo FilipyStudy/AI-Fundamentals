@@ -5,9 +5,12 @@ Return the data inside the root node. The type of this value depends on the valu
 
 ##### includeNode(Data, orientation, position, fatherID)
 Include a node, the data type is defined by the user.
+
+
+* Data: * Defined by the user, but using python, the user can use various types on the tree.
 * orientation: * is about the node side.
-* position: * same as orientation.
-* fatherID: * self explanatory.
+* position: * Position in the Father node.
+* fatherID: * Father identification.
 
 ##### getKeys()
 Get a list of the node id's.
