@@ -70,8 +70,10 @@ class BinaryTree:
 
         #Get the children's id from the father node.
         def getChildrens(nodeID):
-            if type(NodeID) != int:
-                return "Verify the nodeID and try again."
+            if type(nodeID) != int and nodeID not in list(BinaryTree.binaryTree.keys()):
+                return "Verify the nodeID and try again. Use getKeys() to get a list of keys."
+            elif nodeID not in list(BinaryTree.binaryTree.keys()):
+                    return f"{nodeID} is not an node id in this tree, use getKeys() to get a list of keys."
             
             else:
                 return f"{BinaryTree.binaryTree[nodeID][3]}"
@@ -91,7 +93,7 @@ class BinaryTree:
         #Define the data inside the node.
         def defineNodeData(nodeID, data):
             if type(nodeID) != int and nodeID not in list(BinaryTree.binaryTree.keys()):
-                return "Verify the node id, and try again. Use getKeys() to get a list of node id's"
+                return "Verify the node id and if it's an int number, and try again. Use getKeys() to get a list of node id's"
 
             else:
                 BinaryTree.binaryTree[nodeID][0] = data
